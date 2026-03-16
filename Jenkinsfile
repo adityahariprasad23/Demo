@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/adityahariprasad23/Demo.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'Building project...'
@@ -23,10 +17,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying project to server...'
+                echo 'Deploying project...'
             }
         }
 
     }
 }
-// trigger build
